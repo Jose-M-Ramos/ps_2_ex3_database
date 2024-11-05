@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nba"
+version = "0.1.0"
+description = "A package for NBA data analysis"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+license = {text = "MIT"}
+dependencies = [
+    "polars",
+    "pandas",
+    "duckdb",
+    "kaggle",
+    "sqlite",
+    "seaborn",
+    "pre-commit",
+    "ipykernel",
+    "click"
+]
+requires-python = ">=3.7"
+
+[tool]
+conda = { channels = ["defaults", "conda-forge"] }
+
+[project.urls]
+homepage = "https://github.com/username/nba"
+repository = "https://github.com/username/nba"
+
+[tool.pre-commit]
+# This section is optional, use if you'd like to automatically run pre-commit hooks
+hook = "pre-commit install"
